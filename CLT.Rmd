@@ -18,6 +18,7 @@ my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
 densityplot(my1000,main="original data")
 Originalmean<-mean(my1000)
 OriginalSD<-sd(my1000)
+options(digits=1)
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
@@ -50,3 +51,46 @@ sample4sd<-sd(x.avg)
 ```
 
 The mean for sample 4 is `r sample4mean` and standard deviation for sample 4 is `r sample4sd`
+There 5 peaks in sample size 4 with them being 4 people not liking her to 1 out 4, then to 2 out of 4 liking her, 3 out of 4 liking her and lastly 4 out of 4 liking her. With the highest peak being at 2 out of 4 people liking her. 
+
+```{r}
+numb = 9
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 9")
+sample9mean<-mean(x.avg)
+sample9sd<-sd(x.avg)
+```
+
+```{r}
+numb = 16
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 16")
+sample16mean<-mean(x.avg)
+sample16sd<-sd(x.avg)
+```
+
+```{r}
+numb = 25
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 25")
+sample25mean<-mean(x.avg)
+sample25sd<-sd(x.avg)
+```
+
+```{r}
+numb = 36
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 36")
+sample36mean<-mean(x.avg)
+sample36sd<-sd(x.avg)
+```
+
+Sample 36 mean is `r sample36mean` and Sample 36 standard deviation is `r sample36sd`
