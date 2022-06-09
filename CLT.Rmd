@@ -63,6 +63,8 @@ sample9mean<-mean(x.avg)
 sample9sd<-sd(x.avg)
 ```
 
+Sample 9 mean is `r sample9mean` and Sample 9 standard deviation is `r sample9sd`
+
 ```{r}
 numb = 16
 Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
@@ -73,6 +75,8 @@ sample16mean<-mean(x.avg)
 sample16sd<-sd(x.avg)
 ```
 
+Sample 16 mean is `r sample16mean` and Sample 16 standard deviation is `r sample16sd`
+
 ```{r}
 numb = 25
 Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
@@ -82,6 +86,8 @@ densityplot(x.avg,main="sample size 25")
 sample25mean<-mean(x.avg)
 sample25sd<-sd(x.avg)
 ```
+
+Sample 25 mean is `r sample25mean` and Sample 25 standard deviation is `r sample25sd`
 
 ```{r}
 numb = 36
